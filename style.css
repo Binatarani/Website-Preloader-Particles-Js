@@ -114,13 +114,15 @@ body {
 
 @media only screen and (max-width: 767px) {
   .hero-text h2 {
-    font-size: 30px;
-    margin-left: 5px;
+    font-size: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
   }
   .hero-text p {
-    font-size: 14px;
-    margin-left: 5px;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
   }
 
