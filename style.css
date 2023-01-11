@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* hero-section
+ */
+.hero-section {
+  height: 100vh;
+  background-image: url(img/one.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+
+.hero-text {
+  width: 650px;
+  text-align: center;
+  z-index: 3;
+}
+.hero-text h2 {
+  font-size: 42px;
+}
+.hero-text p {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.hero-text a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  background-color: #3434fd;
+  color: #fff;
+  border-radius: 5%;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* Preloder area css 
+*/
+#preloader-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloder-area::after,
+#preloder-area::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-color: #111;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+#preloder-area::before {
+  left: 0px;
+}
+#preloder-area::after {
+  right: 0px;
+}
+
+.page-loaded .spinner-border {
+  display: none;
+}
+#preloder-area.page-loaded::before {
+  left: -50%;
+}
+#preloder-area.page-loaded::after {
+  right: -50%;
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-text h2 {
+    font-size: 30px;
+  }
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-text a {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}
